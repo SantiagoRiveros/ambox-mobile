@@ -23,3 +23,4 @@ export default function StepOne({ navigation }) {
     </>
   );
 }
+// Nace interactua y muere o se monta, se interactua (o actualiza) y se desmonta
