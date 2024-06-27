@@ -1,0 +1,3 @@
+Git es un sistema de control de versiones.
+Basicamente git nos va a servir para almacenar los cambios que vayamos haciendo el codigo y poder controlar
+su versionado.

@@ -19,6 +19,30 @@ export default function Home({ navigation }) {
     aplicaremos asincronismo, y el await se usa de manera contextual, segun que dato no sea "inmediato"
     */
 
+    /* 
+    PETICIONES o METODOS HTTP
+    HTTP (Hypertext Transfer Protocol) es un protocolo para la trasmision de datos entre "entidades"
+    
+    GET <- Traer uno o varios items
+    PUT <- Actualizar/editar un item
+    POST <- Crear un nuevo item
+    DELETE <- Borrar un item
+    */
+
+
+    /* 
+    CRUD, es un formulario el cual se encarga de "administrar" algunos items o productos, usuarios, etc.
+    Ej: Formulario de alta/modificacion de producto en un e-commerce
+    Create <- Crear un producto nuevo
+    Read <- Leer uno o varios productos
+    Update <- Actualizar un producto
+    Delete <- Borrar un producto
+    
+    */
+
+
+    /* Axios es una libreria de Javascript que nos permite realizar peticiones HTTP desde nuestro front end */
+
     async function loadApi(){
       let apiData = await axios.get("https://pokeapi.co/api/v2/pokemon/pikachu")
       console.log(apiData)
