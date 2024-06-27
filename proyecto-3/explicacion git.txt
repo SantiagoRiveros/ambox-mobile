@@ -1,3 +1,17 @@
 Git es un sistema de control de versiones.
 Basicamente git nos va a servir para almacenar los cambios que vayamos haciendo el codigo y poder controlar
 su versionado.
+
+Para subir cambios, deben realizar estos comandos en la carpeta raiz:
+
+git add .
+git commit -m "comentario que quieran aca"
+git push
+
+Para traer cambios es:
+
+git pull
+
+Para clonar un repositorio:
+
+git clone {url del respositorio}
