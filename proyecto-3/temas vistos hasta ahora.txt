@@ -1,0 +1,9 @@
+1- React Native | Que es y como usarlo junto con expo
+2- Componentes en React Native
+3- Estilizado en React Native.
+4- Enroutamiento en React Native.
+6- Llamadas a API (O API-REST)
+7- Que es un Frontend un backend y una DB
+8- Asincronismo
+9- Metodos HTTP
+10- Git.

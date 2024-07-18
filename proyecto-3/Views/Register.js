@@ -2,6 +2,7 @@ import { View, Text, TextInput, Button } from "react-native";
 import { useState } from "react";
 import validateEmail from "../Validations/ValidateEmail";
 import { validateName, validatePassword } from "../Validations";
+import axios from "axios";
 
 export default function Register({ navigation }) {
   const [register, setRegister] = useState({
@@ -44,6 +45,11 @@ export default function Register({ navigation }) {
         : !validateName(register.lastName)
         ? "Last name must only contain letters."
         : "",
+      userName: !register.userName.trim()
+        ? "You must complete user name input"
+        : register.userName.length < 5
+        ? "User name need at least 5 characters long"
+        : "",
       email: !register.email.trim()
         ? "You must complete email input."
         : !validateEmail(register.email)
@@ -69,7 +75,22 @@ export default function Register({ navigation }) {
         ? "Passwords must match."
         : "",
     };
+
+    const hasErrors = Object.values(errorsDetected).some(
+      (error) => error !== ""
+    );
     setErrors(errorsDetected);
+    return !hasErrors;
+  };
+
+  const handleSubmit = () => {
+    console.log("ACA");
+    if (handleRegister) {
+      console.log("ACA");
+      navigation.navigate("Home");
+    } else {
+      return;
+    }
   };
 
   return (
@@ -104,7 +125,7 @@ export default function Register({ navigation }) {
         onChange={handleChange}
       />
       {errors.passwordRepeat ? <Text>{errors.passwordRepeat}</Text> : null}
-      <Button title="Register" onPress={() => handleRegister} />
+      <Button title="Register" onPress={() => handleSubmit()} />
     </View>
   );
 }
